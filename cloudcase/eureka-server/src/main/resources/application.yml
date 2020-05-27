@@ -1,0 +1,14 @@
+# 配置eureka服务中心
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+#原文链接：https://blog.csdn.net/zhou199252/article/details/80745151
